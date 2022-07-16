@@ -30,12 +30,6 @@
   <link href="{{asset('frontend/assets/css/all.min.css')}}" rel="stylesheet">
   <link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v2.1.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -44,7 +38,7 @@
   @include('layouts.website body.header')
   <!-- End Header -->
 
-  
+
     <main id="main">
             @yield('content')
     </main>
