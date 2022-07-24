@@ -111,3 +111,6 @@ Route::get('/msg/delete/{id}' ,[ContactController::class , 'deleteMessage'])->na
 //change password & user profile
 
 Route::get('/change/password' , [ChangePassword::class , 'changePass'])->name('change.password');
+Route::post('/update/password' , [ChangePassword::class , 'updatePass'])->name('update.password');
+Route::get('/user/profile' , [ChangePassword::class , 'profile'])->name('profile');
+Route::post('/profile/update' , [ChangePassword::class , 'updateProfile'])->name('update.profile');

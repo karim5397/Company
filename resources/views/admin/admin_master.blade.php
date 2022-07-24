@@ -87,11 +87,8 @@
                         <div class="navbar-right ">
                             <ul class="nav navbar-nav">
                             <!-- Github Link Button -->
-                            <li class="github-link mr-3">
-                                <a class="btn btn-outline-secondary btn-sm" href="https://github.com/tafcoder/sleek-dashboard" target="_blank">
-                                <span class="d-none d-md-inline-block mr-2">Source Code</span>
-                                <i class="mdi mdi-github-circle"></i>
-                                </a>
+                            <li class="mr-3">
+                                <a href="{{url('/')}}" target="_blank"><i class="fa-solid fa-earth-americas fa-2x" style="color:#a6aab4;"></i></a>
 
                             </li>
                             <li class="dropdown notifications-menu">
@@ -151,7 +148,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="profile.html">
+                                    <a href="{{route('profile')}}">
                                     <i class="mdi mdi-account"></i> My Profile
                                     </a>
                                 </li>

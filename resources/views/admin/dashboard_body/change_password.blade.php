@@ -5,7 +5,8 @@
             <h2>Change Password</h2>
         </div>
         <div class="card-body">
-            <form class="form-pill">
+            <form class="form-pill" action="{{route('update.password')}}" method="POST">
+                @csrf
                 <div class="form-group">
                     <label >Current Password</label>
                     <input type="password"  id="current_password" name="oldpassword" class="form-control"  placeholder="Enter Old Password">
