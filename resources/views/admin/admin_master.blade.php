@@ -20,6 +20,7 @@
   <link href="{{asset('backend/assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet" />
   <link href="{{asset('backend/assets/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet" />
   <link href="{{asset('backend/assets/css/all.min.css')}}"  rel="stylesheet"/>
+  <link href="{{asset('backend/assets/css/bootstrap.min.css')}}"  rel="stylesheet"/>
   <link href="{{asset('backend/assets/css/fontawesome-browser.css')}}"  rel="stylesheet"/>
 
   <!-- SLEEK CSS -->
@@ -61,7 +62,7 @@
 
 
 
-        <div class="page-wrapper">
+            <div class="page-wrapper">
                     <!-- Header -->
                     <header class="main-header " id="header">
                         <nav class="navbar navbar-static-top navbar-expand-lg">
@@ -187,7 +188,7 @@
                     </div>
 
 
-                {{-- <footer class="footer mt-auto">
+                <footer class="footer mt-auto">
                             <div class="copyright bg-white">
                             <p>
                                 &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
@@ -203,13 +204,13 @@
                                 var year = d.getFullYear();
                                 document.getElementById("copy-year").innerHTML = year;
                             </script>
-                </footer> --}}
+                </footer>
 
             </div>
         </div>
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
             <script src="{{asset('backend/assets/js/jquery.slim.min.js')}}"></script>
             <script src="{{asset('backend/assets/js/customSelect.jquery.min.js')}}"></script>
             <script src="{{asset('backend/assets/js/jquery-3.6.0.min.js')}}"></script>

@@ -68,9 +68,15 @@
                 <div class="row">
                   <div class="form-group col-md-12 mb-4">
                     <input type="email" class="form-control input-lg" name="email" aria-describedby="emailHelp" placeholder="Email">
+                    @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                   </div>
                   <div class="form-group col-md-12 ">
                     <input type="password" class="form-control input-lg" name="password" placeholder="Password">
+                    @error('password')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                   </div>
                   <div class="col-md-12">
                     <div class="d-flex my-2 justify-content-between">

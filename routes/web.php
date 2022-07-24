@@ -95,3 +95,13 @@ Route::get('/portoflio' ,[HomeController::class , 'portoflio'])->name('portoflio
 
 //contact us
 Route::get('/contact' ,[ContactController::class , 'index'])->name('contact-us');
+Route::get('/admin/contacts' , [ContactController::class , 'adminContact'])->name('contacts.index');
+Route::get('/contact/create' ,[ContactController::class , 'create'])->name('contact.create');
+Route::post('/contact/store' ,[ContactController::class , 'store'])->name('contact.store');
+Route::get('/contact/edit/{id}' ,[ContactController::class , 'edit'])->name('contact.edit');
+Route::put('/contact/update/{contact}' ,[ContactController::class , 'update'])->name('contact.update');
+Route::get('/contact/delete/{id}' ,[ContactController::class , 'destroy'])->name('contact.delete');
+
+Route::post('/send-message' ,[ContactController::class , 'ContactMessage'])->name('contact.form');
+Route::get('/show/message' ,[ContactController::class , 'showMessage'])->name('show.form');
+Route::get('/msg/delete/{id}' ,[ContactController::class , 'deleteMessage'])->name('delete.form');

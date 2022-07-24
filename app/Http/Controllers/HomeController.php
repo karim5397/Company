@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Brand;
+use App\Models\Contact;
 use App\Models\MultiPic;
 use App\Models\Service;
 use App\Models\Slider;
@@ -17,7 +18,8 @@ class HomeController extends Controller
     $abouts=About::first();
     $services=Service::get();
     $multipics=MultiPic::all();
-    return view('home' ,compact('brands','sliders' , 'abouts' ,'services','multipics'));
+    $contacts=Contact::get();
+    return view('home' ,compact('brands','sliders' , 'abouts' ,'services','multipics','contacts'));
    }
 
    public function portoflio(){
