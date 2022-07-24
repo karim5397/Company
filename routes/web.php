@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MultiPicController;
@@ -105,3 +106,8 @@ Route::get('/contact/delete/{id}' ,[ContactController::class , 'destroy'])->name
 Route::post('/send-message' ,[ContactController::class , 'ContactMessage'])->name('contact.form');
 Route::get('/show/message' ,[ContactController::class , 'showMessage'])->name('show.form');
 Route::get('/msg/delete/{id}' ,[ContactController::class , 'deleteMessage'])->name('delete.form');
+
+
+//change password & user profile
+
+Route::get('/change/password' , [ChangePassword::class , 'changePass'])->name('change.password');
