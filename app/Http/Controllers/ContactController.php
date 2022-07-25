@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ExportForm;
 use App\Models\Contact;
-use Illuminate\Http\Request;
-use App\Http\Requests\contact\ContactRequest;
 use App\Models\ContactForm;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Requests\contact\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -60,6 +62,10 @@ class ContactController extends Controller
     public function deleteMessage($id){
         ContactForm::find($id)->delete();
         return redirect()->back()->with('message' , 'The Message Deleted');
+    }
+
+    public function export(){
+        return Excel::download(new ExportForm, 'forms.xlsx');
     }
 
 }

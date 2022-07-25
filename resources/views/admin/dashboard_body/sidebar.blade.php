@@ -92,7 +92,7 @@
                                     <li  class="has-sub" >
                                         <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements"
                                             aria-expanded="false" aria-controls="ui-elements">
-                                            <i class="mdi mdi-folder-multiple-outline"></i>
+                                            <i class="mdi mdi-email"></i>
                                             <span class="nav-text">Contacts</span> <b class="caret"></b>
                                         </a>
                                         <ul  class="collapse"  id="ui-elements" data-parent="#sidebar-menu">
@@ -107,6 +107,35 @@
                                                 <li>
                                                     <a class="sidenav-item-link" href="{{route('show.form')}}">
                                                     <span class="nav-text">Contact Message</span>
+
+                                                    </a>
+                                                </li>
+
+
+
+
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <li  class="has-sub" >
+                                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#user"
+                                            aria-expanded="false" aria-controls="user">
+                                            <i class="mdi mdi-account-group"></i>
+                                            <span class="nav-text">All Users</span> <b class="caret"></b>
+                                        </a>
+                                        <ul  class="collapse"  id="user" data-parent="#sidebar-menu">
+                                            <div class="sub-menu">
+
+                                                <li>
+                                                    <a class="sidenav-item-link" href="{{route('users.index')}}">
+                                                    <span class="nav-text">Show Users</span>
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="sidenav-item-link" href="{{route('users.create')}}">
+                                                    <span class="nav-text">Create User</span>
 
                                                     </a>
                                                 </li>

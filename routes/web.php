@@ -63,6 +63,7 @@ Route::post('/add/image' ,[MultiPicController::class , 'store'])->name('store.im
 
 //user routes
 Route::get('/user/logout' , [UserController::class , 'Logout'])->name('user.logout');
+Route::resource('users' , UserController::class);
 
 
 //Admin routes
@@ -106,6 +107,7 @@ Route::get('/contact/delete/{id}' ,[ContactController::class , 'destroy'])->name
 Route::post('/send-message' ,[ContactController::class , 'ContactMessage'])->name('contact.form');
 Route::get('/show/message' ,[ContactController::class , 'showMessage'])->name('show.form');
 Route::get('/msg/delete/{id}' ,[ContactController::class , 'deleteMessage'])->name('delete.form');
+Route::get('/export', [ContactController::class, 'export'])->name('admin.export');
 
 
 //change password & user profile

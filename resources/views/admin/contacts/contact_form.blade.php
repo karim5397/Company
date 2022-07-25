@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col">
 
+                <a href="{{route('admin.export')}}" class="btn btn-success mb-3" style="width: fit-content">Export</a>
                 <div class="card">
-
                     @if (session('message'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>{{session('message')}}</strong>

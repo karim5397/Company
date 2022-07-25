@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
   <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
 
+
+  {{-- <!--toastr-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
   <!-- PLUGINS CSS STYLE -->
   <link href="{{asset('backend/assets/plugins/toaster/toastr.min.css')}}" rel="stylesheet" />
   <link href="{{asset('backend/assets/plugins/nprogress/nprogress.css')}}" rel="stylesheet" />
@@ -72,7 +75,7 @@
                         </button>
                         <!-- search form -->
                         <div class="search-form d-none d-lg-inline-block">
-                            <div class="input-group">
+                            {{-- <div class="input-group">
                             <button type="button" name="search" id="search-btn" class="btn btn-flat">
                                 <i class="mdi mdi-magnify"></i>
                             </button>
@@ -81,14 +84,14 @@
                             </div>
                             <div id="search-results-container">
                             <ul id="search-results"></ul>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="navbar-right ">
                             <ul class="nav navbar-nav">
                             <!-- Github Link Button -->
                             <li class="mr-3">
-                                <a href="{{url('/')}}" target="_blank"><i class="fa-solid fa-earth-americas fa-2x" style="color:#a6aab4;"></i></a>
+                                <a href="{{url('/')}}" target="_blank"><i class="mdi mdi-earth" style="color:#a6aab4; font-size:25px;"></i></a>
 
                             </li>
                             <li class="dropdown notifications-menu">
@@ -207,7 +210,9 @@
         </div>
 
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
-            {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
+
+
+
             <script src="{{asset('backend/assets/js/jquery.slim.min.js')}}"></script>
             <script src="{{asset('backend/assets/js/customSelect.jquery.min.js')}}"></script>
             <script src="{{asset('backend/assets/js/jquery-3.6.0.min.js')}}"></script>
@@ -226,14 +231,35 @@
             <script src="{{asset('backend/assets/plugins/jvectormap/jquery-jvectormap-world-mill.js')}}"></script>
             <script src="{{asset('backend/assets/plugins/daterangepicker/moment.min.js')}}"></script>
             <script src="{{asset('backend/assets/plugins/daterangepicker/daterangepicker.js')}}"></script>
-            <script src="{{asset('backend/assets/plugins/jekyll-search.min.js')}}"></script>
+            {{-- <script src="{{asset('backend/assets/plugins/jekyll-search.min.js')}}"></script> --}}
             <script src="{{asset('backend/assets/js/sleek.js')}}"></script>
             <script src="{{asset('backend/assets/js/chart.js')}}"></script>
             <script src="{{asset('backend/assets/js/date-range.js')}}"></script>
             <script src="{{asset('backend/assets/js/map.js')}}"></script>
 
             <script src="{{asset('backend/assets/js/custom.js')}}"></script>
+              {{-- toastr
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script>
+                @if (session::has('message'))
+                var type = "{{session::get('alert-type' , 'info')}}"
+                switch (type) {
+                    case 'info' :
+                        toastr.info("{{session::get('message')}}");
+                        break;
+                    case 'success' :
+                        toastr.success("{{session::get('message')}}");
+                        break;
+                    case 'warning' :
+                        toastr.warning("{{session::get('message')}}");
+                        break;
+                    case 'error' :
+                        toastr.error("{{session::get('message')}}");
+                        break;
+                }
 
+                @endif
+            </script> --}}
 
 
 
