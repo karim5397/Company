@@ -24,8 +24,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//home route
 Route::get('/' , [HomeController::class ,'index'])->name('home');
+Route::get('/aboutus' , [HomeController::class , 'aboutUs'])->name('aboutus');
+Route::get('/services' , [HomeController::class , 'services'])->name('services');
+Route::get('/portoflio' ,[HomeController::class , 'portoflio'])->name('portoflio');
+Route::get('/pricing' ,[HomeController::class , 'pricing'])->name('pricing');
+Route::get('/blogs' ,[HomeController::class , 'blogs'])->name('blogs');
+Route::get('/team' ,[HomeController::class , 'team'])->name('team');
+Route::get('/testimonials' ,[HomeController::class , 'testimonials'])->name('testimonials');
 
 Route::middleware([
     'auth:sanctum',
@@ -91,8 +98,8 @@ Route::post('/service/update/{id}' ,[ServiceController::class , 'update'])->name
 Route::get('/service/delete/{id}' ,[ServiceController::class , 'destroy'])->name('service.delete');
 
 
-//portoflio
-Route::get('/portoflio' ,[HomeController::class , 'portoflio'])->name('portoflio');
+
+
 
 
 //contact us
@@ -116,3 +123,5 @@ Route::get('/change/password' , [ChangePassword::class , 'changePass'])->name('c
 Route::post('/update/password' , [ChangePassword::class , 'updatePass'])->name('update.password');
 Route::get('/user/profile' , [ChangePassword::class , 'profile'])->name('profile');
 Route::post('/profile/update' , [ChangePassword::class , 'updateProfile'])->name('update.profile');
+
+

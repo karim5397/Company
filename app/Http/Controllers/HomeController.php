@@ -26,6 +26,27 @@ class HomeController extends Controller
     $multipics=MultiPic::all();
     return view('pages.portoflio' , compact('multipics'));
    }
+    public function aboutUs(){
+        $abouts=About::first();
+        $brands=Brand::get();
+        return view('pages.aboutus' , compact('abouts','brands'));
+    }
+    public function services(){
+        $services=Service::get();
+        return view('pages.services' ,compact('services'));
+    }
+    public function pricing(){
+        return view('pages.pricing');
+    }
+    public function blogs(){
+        return view('pages.blogs');
+    }
+    public function team(){
+        return view('pages.team');
+    }
+    public function testimonials(){
+        return view('pages.testimonials');
+    }
 
 
 }

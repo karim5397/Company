@@ -1,8 +1,8 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html"><span>Com</span>pany</a></h1>
-    
+      <h1 class="logo mr-auto"><a href="{{route('home')}}"><span>Com</span>pany</a></h1>
+
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -10,25 +10,16 @@
 
           <li class="drop-down"><a href="">About</a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
+              <li><a href="{{route('aboutus')}}">About Us</a></li>
+              <li><a href="{{route('team')}}">Team</a></li>
+              <li><a href="{{route('testimonials')}}">Testimonials</a></li>
             </ul>
           </li>
 
-          <li><a href="services.html">Services</a></li>
+          <li><a href="{{route('services')}}">Services</a></li>
           <li><a href="{{route('portoflio')}}">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="{{route('pricing')}}">Pricing</a></li>
+          <li><a href="{{route('blogs')}}">Blog</a></li>
           <li><a href="{{route('contact-us')}}">Contact</a></li>
 
         </ul>
